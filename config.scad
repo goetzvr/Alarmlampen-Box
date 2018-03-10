@@ -5,12 +5,16 @@ $fn = 200;
 material_z = 3;
 nothing = 0.01;
 
-box_x = 200;
-box_y = 200;
+box_x = 180;
+box_y = box_x;
 box_z = 50;
 
 top_inset_z = 3;
 bottom_inset_z = 3;
+
+nose_width = box_x / 3;
+nose_offset_x = box_x/2 - nose_width/2;
+nose_offset_y = nose_offset_x;
 
 /*
  * Pintsch Bamag KNRW-220-G measures

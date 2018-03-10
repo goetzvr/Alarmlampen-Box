@@ -13,14 +13,20 @@ module model()
     translate([0, 0, box_z - top_inset_z - material_z])
     box_top();
 
+    #color("green")
+    translate([0, -nothing, 0])
     side_x();
 
-    translate([0, box_y - material_z, 0])
+    color("green")
+    translate([0, box_y - material_z + nothing, 0])
     side_x();
 
+    color("blue")
+    translate([-nothing, 0, 0])
     side_y();
 
-    translate([box_x - material_z, 0, 0])
+    color("blue")
+    translate([box_x - material_z + nothing, 0, 0])
     side_y();
 }
 
