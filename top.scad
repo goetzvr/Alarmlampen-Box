@@ -22,7 +22,7 @@ module box_top()
         }
 
         // Cut away the holes for the lamp connection
-        for (i = [0:0])
+        for (i = [0:6])
         {
             hole = lamp_holes[i];
             hole_x = hole[0];
