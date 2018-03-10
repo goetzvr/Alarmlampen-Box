@@ -9,6 +9,9 @@ box_x = 200;
 box_y = 200;
 box_z = 50;
 
+top_inset_z = 3;
+bottom_inset_z = 3;
+
 /*
  * Pintsch Bamag KNRW-220-G measures
  */
