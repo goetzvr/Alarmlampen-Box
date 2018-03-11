@@ -22,11 +22,11 @@ module model()
     side_x();
 
     color("blue")
-    translate([-nothing, 0, 0])
+    translate([side_y_inset - nothing, 0, 0])
     side_y();
 
     color("blue")
-    translate([box_x - material_z + nothing, 0, 0])
+    translate([box_x - side_y_inset - material_z + nothing, 0, 0])
     side_y();
 }
 

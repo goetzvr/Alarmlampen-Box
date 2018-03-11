@@ -9,8 +9,9 @@ box_x = 180;
 box_y = box_x;
 box_z = 50;
 
-top_inset_z = 3;
-bottom_inset_z = 3;
+top_inset_z = 2;
+bottom_inset_z = 2;
+side_y_inset = 2;
 
 nose_width = box_x / 3;
 nose_offset_x = box_x/2 - nose_width/2;

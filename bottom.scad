@@ -5,12 +5,12 @@ module box_bottom()
 {
     // Central plate
     translate([
-        material_z,
+        material_z + side_y_inset,
         material_z,
         0
         ])
     cube([
-        box_x - 2*material_z,
+        box_x - 2*material_z - 2*side_y_inset,
         box_y - 2*material_z,
         material_z
         ]);
@@ -35,8 +35,8 @@ module box_bottom()
 
     // Add left and right edge noses
     for (x = [
-            0,
-            box_x - material_z - nothing
+            side_y_inset,
+            box_x - side_y_inset - material_z - nothing
             ])
     {
         translate([
