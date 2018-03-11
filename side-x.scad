@@ -1,5 +1,6 @@
 
 include <config.scad>;
+use <snap-joint/snap-nut.scad>;
 
 module side_x()
 {
@@ -35,6 +36,18 @@ module side_x()
             material_z + 2*nothing,
             material_z
             ]);
+
+        // Snap nuts
+        for (x = [
+                material_z/2 + side_y_inset,
+                box_x - material_z/2 - side_y_inset
+                ])
+        {
+            scale([1, 2, 1])
+            translate([x, 0, box_z/2])
+            rotate([0, 90, 0])
+            snap_nut_cutout();
+        }
     }
 }
 
