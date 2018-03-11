@@ -17,6 +17,11 @@ nose_width = box_x / 3;
 nose_offset_x = box_x/2 - nose_width/2;
 nose_offset_y = nose_offset_x;
 
+snap_joint_width = 25;
+snap_joint_cutout_width = snap_joint_width + 2;
+snap_joint_height = 25;
+snap_joint_feather_hook_height = 5;
+
 /*
  * Pintsch Bamag KNRW-220-G measures
  */

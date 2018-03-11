@@ -1,5 +1,6 @@
 
 include <config.scad>;
+use <snap-joint/snap-joint.scad>;
 
 module side_y()
 {
@@ -36,7 +37,30 @@ module side_y()
             nose_width,
             material_z
             ]);
+
+        // Front edge snap-joint cutout
+        translate([
+            -nothing,
+            -nothing,
+            box_z/2 - snap_joint_cutout_width/2
+            ])
+        cube([
+            material_z + 2*nothing,
+            snap_joint_height - snap_joint_feather_hook_height,
+            snap_joint_cutout_width
+            ]);
     }
+
+    // Front edge snap-joint
+    translate([
+        material_z/2,
+        snap_joint_height - snap_joint_feather_hook_height - nothing,
+        box_z/2
+        ])
+    rotate([180, 90, 0])
+    snap_joint(
+        height = snap_joint_height + 2*nothing
+        );
 }
 
 side_y();

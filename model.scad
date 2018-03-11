@@ -21,7 +21,7 @@ module model()
     translate([0, box_y - material_z + nothing, 0])
     side_x();
 
-    color("blue")
+    #color("blue")
     translate([side_y_inset - nothing, 0, 0])
     side_y();
 
