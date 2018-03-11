@@ -4,6 +4,7 @@ use <snap-joint/snap-joint.scad>;
 
 module side_y()
 {
+    snap_cutout_size_y = snap_joint_height - snap_joint_feather_hook_height;
     difference()
     {
         // Plate
@@ -46,7 +47,19 @@ module side_y()
             ])
         cube([
             material_z + 2*nothing,
-            snap_joint_height - snap_joint_feather_hook_height,
+            snap_cutout_size_y,
+            snap_joint_cutout_width
+            ]);
+
+        // Back edge snap-joint cutout
+        translate([
+            -nothing,
+            box_y - snap_cutout_size_y + nothing,
+            box_z/2 - snap_joint_cutout_width/2
+            ])
+        cube([
+            material_z + 2*nothing,
+            snap_cutout_size_y,
             snap_joint_cutout_width
             ]);
     }
@@ -54,10 +67,21 @@ module side_y()
     // Front edge snap-joint
     translate([
         material_z/2,
-        snap_joint_height - snap_joint_feather_hook_height - nothing,
+        snap_joint_height - snap_joint_feather_hook_height + nothing,
         box_z/2
         ])
     rotate([180, 90, 0])
+    snap_joint(
+        height = snap_joint_height + 2*nothing
+        );
+
+    // Back edge snap-joint
+    translate([
+        material_z/2,
+        box_y - snap_joint_height + snap_joint_feather_hook_height - nothing,
+        box_z/2
+        ])
+    rotate([0, 90, 0])
     snap_joint(
         height = snap_joint_height + 2*nothing
         );
