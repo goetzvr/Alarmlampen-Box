@@ -15,11 +15,11 @@ module model()
 
     #color("green")
     translate([0, -nothing, 0])
-    side_x();
+    side_x(true, false);
 
     color("green")
     translate([0, box_y - material_z + nothing, 0])
-    side_x();
+    side_x(false, true);
 
     #color("blue")
     translate([side_y_inset - nothing, 0, 0])

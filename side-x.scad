@@ -1,8 +1,13 @@
 
 include <config.scad>;
 use <snap-joint/snap-nut.scad>;
+use <nrfduino.scad>;
+use <relay.scad>;
 
-module side_x()
+module side_x(
+            cutout_nrfduino=false,
+            cutout_relay=true
+            )
 {
     difference()
     {
@@ -47,6 +52,30 @@ module side_x()
             translate([x, 0, box_z/2])
             rotate([0, 90, 0])
             snap_nut_cutout();
+        }
+
+        // Holes for the nRFduino
+        if (cutout_nrfduino)
+        {
+            translate([
+                nrfduino_offset_x,
+                0,
+                nrfduino_offset_z,
+                ])
+            rotate([90, 0, 0])
+            nrfduino();
+        }
+
+        // Holes for the relay
+        if (cutout_relay)
+        {
+            translate([
+                relay_offset_x,
+                0,
+                relay_offset_z
+                ])
+            rotate([90, 0, 0])
+            relay();
         }
     }
 }

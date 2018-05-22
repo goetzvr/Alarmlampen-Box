@@ -58,3 +58,17 @@ lamp_holes = [
 
 lamp_offset_x = (box_x - lamp_diameter)/2;
 lamp_offset_y = (box_y - lamp_diameter)/2;
+
+
+/*
+ * nRFduino coordinates (in side-x)
+ */
+nrfduino_offset_x = 45;
+nrfduino_offset_z = 25;
+
+/*
+ * Relay coordinates (in side-x)
+ */
+relay_offset_x = 55;
+relay_offset_z = 35;
+
