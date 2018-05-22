@@ -5,13 +5,13 @@ $fn = 200;
 material_z = 3;
 nothing = 0.01;
 
-box_x = 180;
+box_x = 200;
 box_y = box_x;
-box_z = 50;
+box_z = 100;
 
-top_inset_z = 2;
-bottom_inset_z = 2;
-side_y_inset = 2;
+top_inset_z = 7;
+bottom_inset_z = 7;
+side_y_inset = 7;
 
 nose_width = box_x / 3;
 nose_offset_x = box_x/2 - nose_width/2;
