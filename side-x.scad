@@ -6,7 +6,7 @@ use <relay.scad>;
 
 module side_x(
             cutout_nrfduino=false,
-            cutout_relay=true
+            cutout_relay=false
             )
 {
     difference()
