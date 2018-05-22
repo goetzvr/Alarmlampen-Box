@@ -6,14 +6,14 @@ include <config.scad>;
 
 module relay_hole()
 {
-    diameter = 5;
+    diameter = 3+1;
     radius = diameter/2;
     cylinder(h=3*material_z, r=radius, center=true);
 }
 
 module power_cable_hole()
 {
-    diameter = 8;
+    diameter = 7+1;
     radius = diameter/2;
     cylinder(h=3*material_z, r=radius, center=true);
 }
