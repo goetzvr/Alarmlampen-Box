@@ -9,18 +9,34 @@ box_x = 200;
 box_y = box_x;
 box_z = 100;
 
-top_inset_z = 7;
-bottom_inset_z = 7;
-side_y_inset = 7;
+top_inset_z = 5;
+bottom_inset_z = 5;
+side_y_inset = 5;
 
 nose_width = box_x / 3;
 nose_offset_x = box_x/2 - nose_width/2;
 nose_offset_y = nose_offset_x;
 
+/*
+ * Snap parameters
+ */
+/*
 snap_joint_width = 25;
-snap_joint_cutout_width = snap_joint_width + 2;
 snap_joint_height = 25;
 snap_joint_feather_hook_height = 5;
+*/
+
+snap_joint_width = 60;
+snap_joint_height = 25;
+snap_joint_feather_width = 7;
+snap_joint_feather_hook_width = 2;
+snap_joint_feather_hook_height = 5;
+snap_joint_feather_hook_cutaway = 3;
+snap_joint_feather_base_height = 0.5;
+snap_joint_stick_width = 10;
+
+snap_joint_cutout_width = snap_joint_width + 2;
+
 
 /*
  * Pintsch Bamag KNRW-220-G measures
