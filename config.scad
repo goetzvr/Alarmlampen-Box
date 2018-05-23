@@ -27,7 +27,7 @@ snap_joint_feather_hook_height = 5;
 */
 
 snap_joint_width = 60;
-snap_joint_height = 25;
+snap_joint_height = 40;
 snap_joint_feather_width = 7;
 snap_joint_feather_hook_width = 2;
 snap_joint_feather_hook_height = 5;
